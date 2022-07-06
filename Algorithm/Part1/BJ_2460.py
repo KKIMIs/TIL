@@ -17,6 +17,18 @@
 
 출력
 첫째 줄에 최대 사람 수를 출력한다.  
-
-
 '''
+
+t = [[ 0 for i in range(2)] for j in range(10)]
+max, cur = 0,0
+for i in range(10):
+    t[i][0], t[i][1] = map(int,input().split(" "))
+    cur = cur - t[i][0]
+    cur = cur + t[i][1]
+    if cur > max:
+        max = cur
+   
+print(max)
+
+
+
