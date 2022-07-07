@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/* 구조 선택자
+		:nth-child(2n): 짝수번째
+		:nth-child(2n+1): 홀수번째
+		:nth-chile(3n): 3의 배수번째
+		
+		
+	 */
+	#menu li:nth-child(3n){
+		background-color:pink;
+	}
+	   
+	#menu li:nth-child(3n+1){
+		background-color:lightblue;
+	}
+	#menu li:nth-child(3n+2){
+		background-color:#ddd;
+	}
+	
+	/* 
+		:first-child: 첫번째 객체
+		:last-child: 마지막 객체 
+	 */
+	
+	#menu li:first-child{
+		color:red;
+	}
+	
+	#menu li:last-child{
+		color:blue;
+		font-size:1.2em;
+	}
+</style>
+</head>
+<!-- 
+	html 속성
+	oncontextmenu: 마우스 오른쪽 버튼 메뉴 제어
+	onselectionstart, ondragstart: 드래그 시작 불가능
+	ondragend: 드래그 종료 불가능
+ -->
+<body oncontextmenu="return false" onselectstart="return false">
+	<div id ="menu">
+		<ul>
+			<li>뉴스</li>
+			<li>자동차</li>
+			<li>경제</li>
+			<li>시사</li>
+			<li>웹툰</li>
+			<li>푸드</li>
+			<li>지도</li>
+		</ul>
+	</div>
+	<style>
+	/* 
+		-:nth-of-type()
+		-:first-of-type
+		-:last-of-type
+	 */
+	 #menu2 li:nth-of-type(2n){
+	 	background:orange;
+	 }
+	 #menu2 li:nth-of-type(2n+1){
+	 	background:yellowgreen;
+	 	color:green;
+	 }
+	 #menu2 li:first-of-type{
+	 	background:lightblue;
+	 }
+	 #menu2 li:last-of-type{
+	 	background:magenta
+	 }
+	 
+	</style>
+	<div id ="menu2">
+		<ul>
+			<li>뉴스</li>
+			<li>자동차</li>
+			<li>경제</li>
+			<li>시사</li>
+			<li>웹툰</li>
+			<li>푸드</li>
+			<li>지도</li>
+		</ul>
+	</div>
+	<style>
+	/* 
+		텍스트 스타일
+		::first-letter: 첫번째 문자에 대한 스타일
+		::first-line: 첫번째 줄에 대한 스타일
+		::selection: 선택 영역에 대한 스타일
+	 */
+	 
+	 #txt::first-letter{
+	 	font-size:1.5em;
+	 	color:green;
+	 	font-weight:bold;
+	 	background:#cdd;
+	 }
+	 #txt::first-line{
+	 	background:#8aa;
+	 	text-decoration:underline
+	 }
+	 #txt::selection{
+	 	color:red;
+	 	background:#000;	
+	 }
+	</style>
+	<div id="txt">
+		왜 다시 늘어나는 거래?<br/> <br/> 
+		크게 세 가지 이유가 꼽혀요. 하나씩 살펴보면:<br/> 
+		변이 퍼지고 있어 🦠: 오미크론 변이와 닮은 ‘BA.5 변이 바이러스’가 퍼지고 있는 게 이유로 꼽혀요. <br/> 
+		BA.5는 치명률이 더 높지는 않지만 다른 변이보다 더 잘 퍼지는 데다 백신도 잘 듣지 않거든요. <br/> 
+		최근 우리나라 확진자의 30% 가까이가 BA.5 확진자인데, 앞으로 더 늘어날 것으로 보인다고.<br/> 
+		면역력 떨어졌어 😷: 전문가들은 코로나19에 걸렸거나 백신을 맞았던 사람들도 4개월이 지나면 면역력이 떨어질 수 있다고 하는데요.<br/> 
+		 올해 초 1800만 명의 확진자가 나온 지 약 4개월이 지난 만큼, 많은 사람들의 면역력이 떨어졌고 그래서 지금 확 늘어난다는 것.<br/> 
+		해외 유입 늘었어 🛬: 정부가 방역 규제를 풀어서 이제는 해외에서 들어올 때 자가격리를 안 해도 되는데요. <br/> 
+		해외 입국자가 늘어나면서 확진자도 확 늘어난 것으로 보여요. 그중 절반은 BA.5 변이에 걸린 사람이고요.<br/> 
+	
+	</div>
+
+</body>
+</html>

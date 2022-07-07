@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	CSS: Cascade Style Sheet
+	1. inline : 태그에 직접 스타일 적용
+	2. intername : <style>태그를 이용하여 스타일 시트 모아놓은 스타일
+	3. external : 외부스타일 시트, 스타일 시트 코드마 있는 파일 존재
+	 -->
+<style>
+/* 
+	주석 
+		
+	선택자{
+		속성: 속성값;
+		속성: 속성값;
+			}
+		*/
+/* 태그 선택자 */
+span, b, strong {
+	color: #c3a;  /* #cc33aa */
+	font-weight: bold; /* 100,200,300 ~ 700 */
+	font-size:20px;		/* 기본크기: 16px */
+}
+/* 아이디 선택자 */
+#txt {
+	background: #bef; /* #bbeeff */
+}
+/* 클래스 선택자 */
+.a {
+	background: #dcf;  color:#fef; font-size:35px;
+}
+</style>
+
+</head>
+
+<body>
+	정부가 <span>전기료를 결정</span>한다고? 
+	<br/> <br/> 
+	맞아요. 알고 보면 우리나라는 전기료를 계산하는 방식에서부터 정부의 입김이 많이 들어가 있다고.<br/> 
+	<span id="txt">우리나라 vs. 다른 나라의 전기료 계산 방법 </span>각각 자세히 살펴보면:<br/> <br/> 
+
+	<span class="a">용도를 따져 🇰🇷:</span> <br/> 
+	우리나라는 주택·산업·교육·농사 등 용도에 따라 전기료가 달라요<i class="a">(=용도별차등제)</i>.<br/> 
+	 어디에 쓰느냐에 따라 정부가 요금을 다르게 정해두는 건데요.<br/> 
+	 예를 들어 예전에는 기업이 물건을 많이 만들어서 <strong>수출을
+	잘할 수 있게</strong> <br/> 공장에서 쓰는 전기료를 일부러 훨씬 싸게 매겼어요.<br/> <br/> 
+	<span class="a">원가를 따져 🌎: </span><br/> 
+	다른 나라는 보통 전기의 전압에 따라 요금을 매겨요<i class="a">(=전압별차등제)</i>. <br/> 
+	가정에서 쓰는 전기는 저압으로 손질해야 해서 전기료가 더 비싸고, <br/> 
+	공장 등에서 쓰는 고압 전기료는 상대적으로 싼 것. <br/> 
+	경제성 원리로만 따지면 이쪽이 훨씬 <b>합리적인 제도</b>라고.
+
+</body>
+</html>

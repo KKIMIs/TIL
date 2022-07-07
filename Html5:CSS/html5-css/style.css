@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+body {
+	color:#170;
+	font-size: 20px;
+	background: #ebeae5;
+	margin: 0px;
+}
+
+
+h1{
+	color:orange
+}
+
+/* a 태그의 상태에 따른 스타일시트 적용하기 
+
+	text-decoration: 
+		- linethrough: 취소선
+		- underline: 밑줄 
+		- overline: 윗줄
+		- none: 선없음
+*/	
+
+a:link{ /* : -> 가상 설정 */
+	/* 링크상태일 때 */
+	color:#6eaa90;
+	text-decoration:none;
+}
+
+/* a:visited {
+	방문했을 때
+	color:#6eaa90;
+	background:#ffcaa2;
+	font-weight: bold;
+	text-decoration:none;
+} */
+
+a:hover {
+	/* 마우스를 오버했을 때 */
+	color:#ff6aa2;
+	text-decoration:underline;
+	font-weight: normal;
+}
+
+a:active{
+	/* 마우스를 누른 상태 */
+	color:blue;
+}
+
+

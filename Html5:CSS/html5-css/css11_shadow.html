@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1{
+		width:400px;
+		height:80px;
+		border:1px solid gray;
+		font-size:3em;
+		line-height:80px;
+		margin:20px auto;
+		text-align:center;	
+	}
+
+	/* 글자 그림자 설정 */
+	#txt{
+		/*		왼, 오른쪽  위, 아래 	투명		색상  */
+		text-shadow: -5px	-5px		5px 	red; 
+	}
+	#box{
+		box-shadow:10px 10px 10px #cbc;
+	}
+	
+	/* 그라데이션 
+		http://colorzilla.com/gradient-editor
+	*/
+	div:first-child{
+		 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fceabb+0,009657+40,fccd4d+60,f79400+75,fbdf93+100 */
+background: rgb(252,234,187); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(252,234,187,1) 0%, rgba(0,150,87,1) 40%, rgba(252,205,77,1) 60%, rgba(247,148,0,1) 75%, rgba(251,223,147,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(252,234,187,1) 0%,rgba(0,150,87,1) 40%,rgba(252,205,77,1) 60%,rgba(247,148,0,1) 75%,rgba(251,223,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(252,234,187,1) 0%,rgba(0,150,87,1) 40%,rgba(252,205,77,1) 60%,rgba(247,148,0,1) 75%,rgba(251,223,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		 	
+	}
+	
+	
+</style>
+</head>
+<body>
+	<div >
+		첫째 줄에 테스트 케이스의 개수 T(1 ≤ T ≤ 1,000)가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고, 배열 A의 원소 10개가 공백으로 구분되어 주어진다. 이 원소는 1보다 크거나 같고, 1,000보다 작거나 같은 자연수이다.
+	</div>
+	<div id="d1">
+		<div id="txt">글자 그림자</div>
+		<div id="box">박스 그림자</div>
+	</div>
+</body>
+</html>
