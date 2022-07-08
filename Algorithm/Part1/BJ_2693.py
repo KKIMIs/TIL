@@ -1,4 +1,5 @@
 #BeakJoon 2693
+#2022-07-07
 #N번째 큰 수
 
 
@@ -13,3 +14,16 @@
 각 테스트 케이스에 대해 한 줄에 하나씩 
 배열 A에서 3번째 큰 값을 출력한다.
 '''
+
+num = int(input())
+
+for i in range(num):
+    case = list(map(int,input().split()))
+   
+    for j in range(len(case)-1):
+        for k in range(0, len(case)-1-j):
+            if(case[k]>case[k+1]):
+                tem = case[k]
+                case[k] = case[k+1]
+                case[k+1] = tem
+    print(case[-3])
