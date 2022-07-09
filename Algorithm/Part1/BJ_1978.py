@@ -15,16 +15,20 @@
 
 num = int(input())
 case = list(map(int,input().split()))
-
 cnt = 0
+
 for i in range (len(case)):
     found = False
-    if (case[i]!=1)
-    for j in (2,case[0]):
-        if (case[i]%j==0):
-            found=True
-            print("확인=",case[i], "j=",j)
-            break
-    if (not found):
+    if (case[i]==1):
+        pass
+    elif (case[i]==2):
         cnt += 1
-   
+    else:
+        for j in range(2, case[i]):
+            if (case[i]%j==0):
+                found=True
+                break
+        if (not found):
+            cnt += 1
+
+print(cnt)
