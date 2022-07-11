@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+
+</style>
+<script type="text/javascript">
+	function setTimer(){
+		var now = new Date();
+		var hour = now.getHours();
+		var minute = now.getMinutes();
+		var second = now.getSeconds();
+		
+		var nowTxt = "";
+		
+		if(hour<10){
+			nowTxt += "0" +hour;
+		} else{
+			nowTxt += hour;
+		}
+		nowTxt += ":";
+		
+		if(minute<10){
+			nowTxt += "0" +minute;
+		} else{
+			nowTxt += hour;
+		}
+		nowTxt += ":";
+		nowTxt += second;
+		
+		document.getElementById("clock").innerHTML = nowTxt;
+	}
+
+	var step = 5;
+	var left = 0;
+	
+	function moveImage() {
+		var img = document.getElementById("i").style;
+		left = left + step;
+		img.left = left + "px";
+		//console.log(img.left);
+		
+		if(left>500){
+			step=-5;
+		}if(left<0){
+			step=5;
+		}
+	}
+	
+	var interval;
+	
+	//background
+
+	var y = 0;
+	function backMove(){
+		y += 5;
+		document.getElementById("b").style.backgroundPosition = "0px "+y+"px";
+		
+		
+	}
+	
+</script>
+<style>
+	#i{
+		width:100px; 
+		height:100px; 
+		position:absolute;
+		left:0;  
+		top:0px;
+	}
+	body{
+		background-image: url(../img/tc2.jpg);
+	}
+</style>
+</head>
+<!-- 설정한 시간 간격으로 호출됨 setInterval("호출함수명", 밀리초) -->
+<!-- interval을 중지 시킨다: clearInterval() -->
+<body onload="interval = setInterval('moveImage()', 500); setInterval('setTimer()', 1000); setInterval('backMove()',200); "  id="b">
+					
+	<img src="../img/aesthetic.jpeg">
+	<h1 id ="clock"></h1>
+	<img alt="" src="../img/aesthetic2.jpeg">
+	<img alt="" src="../img/tc3.jpg" id ="i" onmouseover="clearInterval(interval);" 
+								onmouseout="interval=setInterval('moveImage()', 100);">
+								
+</body>
+</html>

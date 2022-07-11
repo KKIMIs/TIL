@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body, ul, li{
+		margin:0;
+		padding:0;
+	}
+	li{
+		list-style-type:none;
+	}
+	header{
+		background-color:#BEA7A2;
+		width:1200px;
+		height:100px;
+		margin: 0 auto;
+	}
+	nav{
+		background-color:#ABBEA2;
+		height:40px;
+		color:#fff;	
+	}
+	/* 메뉴 */
+	#mainMenu{
+		width:1200px;
+		height:40px;
+		margin:0 auto;
+	}
+	#mainMenu>li{
+		float:left;
+		width:25%;
+		height:40px;
+		line-height:40px;
+		text-align:center;
+	}
+	main{
+		width:1200px;
+		margin:0 auto;
+		background-color:#E7E1D5;
+		/* overflow:auto; */
+		position:relative;
+	}
+	#mainsection{
+		overflow:auto;
+	}
+	main>#mainsection>*{
+		float:left;
+	}
+	aside{
+		background-color:#DFE6EB;
+		width:150px;
+	}
+	section{
+		width:1050px;
+	 	background-color:#E8EBDF;
+	}
+	footer{
+		height:80px;
+		background-color:#BEA4A4;
+	}
+	/*배너*/
+	#LeftBanner{
+		background-color:#B1BEA4;
+		width:80px;
+		height:200px;
+		position:absolute;
+		left:-80px;
+		top:100px;
+	}
+	#RightBanner{
+		background-color:#A4BEB1;
+		width:80px;
+		height:200px;
+		position:absolute;
+		left:1200px;
+		top:300px;
+	}
+</style>
+
+</head>
+<body>
+	<header>
+		로고, 로그인, 회원가입, 고객센터
+	</header>
+	<nav>
+		<ul id="mainMenu">
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<main>
+		<div id="mainsection"> 
+			<aside>
+				<h2>서브메뉴</h2>
+				<ul>
+					<li>aside1</li>
+					<li>aside2</li>
+					<li>aside3</li>
+					<li>aside4</li>
+				</ul>
+			</aside>
+			<section>
+				<img src="../img/tc.jpg"/>
+			</section>
+			</div>
+			<!-- 배너 -->
+			
+		<div id="LeftBanner"/> </div>
+		<div id="RightBanner"> </div> 
+	
+	</main>
+	<footer>
+		푸터
+	</footer> 
+</body>
+</html>
