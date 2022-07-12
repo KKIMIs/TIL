@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function popup(){
+		// 쿠키 정보를 확인하여 팝업 띄우기
+		
+		var cookie  = document.cookie; //name=value;name=value
+		console.log(cookie);
+		if(cookie.indexOf("pop=yes")==-1){  //찾는 문자열이 없으면 -1
+			window.open("popup.html",'w',"width=400px height=550px")
+		}
+		
+	}
+
+</script>
+</head>
+<body onload="popup()">
+	<img alt="" src="../img/tc4.jpg">
+</body>
+</html>

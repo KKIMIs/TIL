@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Poster Banner</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	
+	/* img size 116 × 164 */
+	/* button size 25 × 164 */
+	
+	#wrapper {
+		width: 862px;
+		height: 164px;
+		margin: 50px auto;
+		border: 1px solid dimgray;
+		
+	}
+	button{
+		float: left;
+		border:none; 
+		height: 164px;
+		width: 25px;
+		background-color: gainsboro;
+		
+		color: dimgray;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	
+	#inner{
+		background-color: lightblue;
+		overflow: hidden;
+		width: 812px;
+		height: inherit;
+		float:left; 
+	}
+	
+ 	#posters{
+ 		width:3248px; /* 116px * 28개  */
+		position:relative; 
+		/* position:absolute; */   /* oveflow hidden 안됨 */
+	}
+	#posters>li{
+		float:left;
+	} 
+	
+	</style>
+<script type="text/javascript">
+	
+	//포스터 이미지 불러오기
+	function setPoster(){
+		var p_tag = "";
+		for (var i =1; i<30;i++){
+			if (i<10){
+				p_tag += "<li><img src='poster/m0"+i+".png'/></li>" ;
+			}else if(i==24){
+				
+			}else{
+				p_tag += "<li><img src='poster/m"+i+".png'/></li>" ;
+			}	
+		}
+		document.getElementById("posters").innerHTML = p_tag;
+	}
+	
+	
+	//움직임 속도 조절
+	var delay = 50;
+	var step = 5;
+	
+	
+	var left = 0;
+	var dir;  // 1]오른쪽 /2]왼쪽
+	var rolling;
+	//배너 롤링   
+	function move(input){
+		var banner = document.getElementById("posters").style;
+		dir = input;
+		if (dir == 1){
+			left += step;
+			if (left >= 0){
+				left = 0;
+				changeDir(dir);
+			}
+		} else if(dir ==2){
+			left -= step;
+			if (left <= -2436){    // 116px * (28 - 7)개
+				left = -2436;
+				changeDir(dir);
+			}
+		}
+		banner.left = left + "px";
+		//console.log(dir+"방향/ " + left+" left");	
+	}
+	
+	//롤링 방향 전환
+	function changeDir(input){
+		if (input == 1){
+			clearInterval(rolling);
+			rolling=setInterval('move(2)', delay);
+		}else{
+			clearInterval(rolling);
+			rolling=setInterval('move(1)', delay);
+		}
+	}
+	
+
+</script>
+</head>
+<body onload="setPoster(); rolling=setInterval('move(2)', delay); ">
+	<div id="wrapper" >
+		<button onclick="changeDir(2);">ᐊ</button>
+		<div id="inner" onmouseover="clearInterval(rolling);" 
+				onmouseout="rolling=setInterval('move(dir)', delay);">
+			 <ul id="posters">
+			</ul> 
+		</div>
+		<button onclick="changeDir(1);">ᐅ</button>
+	</div>
+</body>
+</html>
