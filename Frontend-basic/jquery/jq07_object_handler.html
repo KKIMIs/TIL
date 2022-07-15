@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<style type="text/css">
+	.c1{
+		border:3px solid dimgrey;
+		width:200px;
+		height:200px;
+	}
+	.c2{
+		border:3px solid dodgerblue;
+		width:200px;
+		height:200px;
+	}
+	.c3{
+		border:3px solid mediumpurple;
+		width:200px;
+		height:200px;
+	}
+	.c4{
+		border:3px solid seagreen;
+		width:200px;
+		height:200px;
+	}
+</style>
+<script type="text/javascript">
+	$(()=>{
+		//html() : 특정 객체에 html 태그를 추가 -> innerHTML 
+		var tag = "<a href=''> 다음</a>를 클릭하시면 페이지가 이동";
+		$('#result').html(tag);
+		
+		console.log($('#result').html());
+		
+		//text(): 특정 객체에 문자를 추가한다
+		var tag2 = "<div>test()속성 연습중</br>";
+		$('#result').text(tag2)
+		
+		console.log($('a').text());
+		
+		$('h2').children('a').attr("href","https://www.nate.com");
+		//속성 지우기
+		$('a').removeAttr('href');
+		$('h').removeAttr('id');
+		
+		//클래스 handler
+		//style 시트의 클래스 조작 방법
+		//addClass(): 클래스 추가
+		$('#lst>img').addClass('c1');
+		$('#lsts>img').addClass('c2');
+		
+		//removeClass() : 클래스 삭제
+		$('#lst>img').removeClass('c2');
+		
+		//짝수 번째 : c3, 홀수번째 c4
+		$('#lst>img:even').addClass('c3');
+		$('#lst>img:odd').addClass('c4');
+		
+		//toggleClass(): 클래스 있으면 지우고 없으면 추가
+		$('#lst>img').toggleClass('c3');
+		
+		//hasClass(): 클래스가 존재하는지 유뮤 확인(true, false)
+		var h = $('#lst>img:first').hasClass('c1');
+		console.log(h);
+		$("h1").text(h+"");
+		
+		//val() : 홈의 value를 구하거나 세탕
+		//html(),text(), attr(), prop()
+		
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<h1 id="object">객체 조작 1</h1>
+	<h2> <a href="">객체 조작 2</a></h2>
+	<div id="result"></div>
+	<div id="lst">
+		<img src="../img/tc5.jpg" />
+		<img src="../img/tc6.jpg" />
+		<img src="../img/tc7.jpg" />
+		<img src="../img/tc8.jpg" />
+	</div>
+</body>
+</html>

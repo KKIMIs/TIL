@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		//인접선택자
+		//모든선택자(*), 태그선택자(p), 아이디선택자(#p), 클래스선택자(.p), 자손선택자(a>b)), 후손선택자(a b)
+		
+		//children(): 자손을 선택
+		$("div").children('.one').css('background','#dcedc8');
+		//next(): 선택자의 다음 객체를 선택
+		$('#first').next().css("color","#33691e");
+		//prv(): 선택자의 이전 객체를 선택
+		$('img').prev().css("border", "2px solid #33691e").css("margin","20px");
+		//parent(): 부모선택자
+		$('img').parent().css("background","#e8f5e9");
+		//sibliing(): 형제선택자
+		$('h2').siblings().css("color", "#6a1b9a");
+		
+		$('div').next().attr("title", "놀러가자");
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1 id ="first">인접선택자</h1>
+		<h1 class="one">children선택자</h1>
+		<h2 class="one">next선택자</h2>
+		<h4>prev선택자</h4>
+		<h4>parent선택자</h4>
+		<h3>sibliing선택자</h3>
+		<h2>후손, 자손선택자</h2>
+	</div>
+	<img src="../img/tc7.jpg" />
+</body>
+</html>

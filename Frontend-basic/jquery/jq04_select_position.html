@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script type="text/javascript">
+	$(function() {
+		$("#menu>li:first").css("color", "#546e7a"); // first, last, even, odd
+		$("#menu>li:last").css("color", "#795548");
+		$("#menu>li:even").css("background", "#bcaaa4"); //0, 1, 2, 3, 4 ...
+		$("#menu>li:odd").css("background", "#b0bec5");
+		
+		$("#menu>li:nth-last-of-type(3)").css("border", "2px solid #222");
+		$("#menu>li:nth-child(3n)").css("font-size", "1.5em"); //1, 2, 3, 4 ...
+		
+		//li태그의 부모 중 자식이 1개인 li을 선택
+		$("li:only-child").css("background", "#fff9c4");
+		
+		//index를 이용한 선택
+		$("#menu>li").slice(3).css('color', '#ffebee'); //index 3부터 선택
+		$("#menu>li").eq(2).css("background", " #9fa8da"); //index가 2인 위치를 선택 
+		
+		//lt(): less than, gt():greater than
+		$("#menu>li:lt(5)").css("font-size", "2em").css("color","#ffee58"); 
+		$("#menu>li:gt(3)").css("color","#f00");  
+	});
+</script>
+</head>
+<body>
+	<ul id="menu">
+		<li>html </li>
+		<li>css </li>
+		<li>javascript </li>
+		<li>jquery </li>
+		<li>ajax </li>
+		<li>spring </li>
+		<li>mybatis </li>
+	</ul>
+	<ul>
+		<li>위치선택자</li>
+	</ul>
+</body>
+</html>
