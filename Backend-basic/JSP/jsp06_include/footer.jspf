@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style type="text/css">
+	#footer{
+		height:40px; 
+		background-color: lightblue;
+	}
+</style>
+
+<div id="footer">
+	<%=username %>
+</div>

@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String username ="홍길동";
+
+%>
+<style type="text/css">
+	#header{
+		background-color: royalblue; 
+		height:40px;
+	}
+</style>
+
+<div id="header">
+	<%=username %>
+</div>
